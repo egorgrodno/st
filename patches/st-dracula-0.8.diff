@@ -61,7 +61,7 @@ index 82b1b09..38f1ee8 100644
 +  [15] = "#ffffff", /* white   */
 +
 +  /* special colors */
-+  [256] = "#282a36", /* background */
++  [256] = "#1e1f29", /* background */
 +  [257] = "#f8f8f2", /* foreground */
  };
  
