@@ -1,35 +1,22 @@
 # st - simple terminal
 
-[st](https://st.suckless.org/ 'st') is a simple terminal emulator for X which sucks less.
+This is a patched and preconfigured [st](https://st.suckless.org/ 'st') package.
 
-## Requirements
+## Applied patches
 
-In order to build st you need the Xlib header files.
+* [nordtheme](https://st.suckless.org/patches/nordtheme/)
+* [scrollback](https://st.suckless.org/patches/scrollback/)
+* [vertcenter](https://st.suckless.org/patches/vertcenter/)
 
-## Patches
+## Configuration
 
-* st-dracula-0.8.diff
-  * Dracula theme
-  * Based on [st-dracula-20170803-7f99032.diff](https://st.suckless.org/patches/dracula/ 'st-dracula-20170803-7f99032.diff'), adjusted for v0.8
-* st-font-source-code-pro-nerd-0.8.diff
-  * [Source Code Pro Nerd Font](https://aur.archlinux.org/packages/nerd-fonts-source-code-pro/ 'Source Code Pro Nerd Font')
-* st-scrollback-0.8.diff
-  * Scroll back through terminal output using Shift+{PageUp, PageDown}.
-  * Based on [st-scrollback-0.8.diff](https://st.suckless.org/patches/scrollback/ 'st-scrollback-0.8.diff'), adjusted scroll size (5 lines instead of 1 page)
+To configure the package edit [config.h](config.h) file.
 
 ## Installation
 
-Apply the patches you need:
+    $ ./install.sh
 
-    git apply patches/*.diff
-
-Edit config.mk to match your local setup (st is installed into
-the /usr/local namespace by default).
-
-Afterwards enter the following command to build and install st (if
-necessary as root):
-
-    make clean install
+That simple script will install package using [makepkg](https://wiki.archlinux.org/index.php/Makepkg 'makepkg') and cleanup afterwards. All the build information can be found in [PKGBUILD](PKGBUILD) and information about `PKGBUILD` can be found [here](https://wiki.archlinux.org/index.php/PKGBUILD 'pkgbuild').
 
 ## Credits
 
