@@ -1,22 +1,24 @@
 # st - simple terminal
 
-This is a patched and preconfigured [st](https://st.suckless.org/ 'st') package.
+Patched and preconfigured [st](https://st.suckless.org/) package.
 
 ## Applied patches
 
 * [nordtheme](https://st.suckless.org/patches/nordtheme/)
 * [scrollback](https://st.suckless.org/patches/scrollback/)
 * [vertcenter](https://st.suckless.org/patches/vertcenter/)
-
-## Configuration
-
-To configure the package edit [config.h](config.h) file.
+* [anysize](https://st.suckless.org/patches/anysize/)
 
 ## Installation
 
-    $ ./install.sh
+Use [makepkg](https://wiki.archlinux.org/index.php/Makepkg) to build and install
+package.
 
-That simple script will install package using [makepkg](https://wiki.archlinux.org/index.php/Makepkg 'makepkg') and cleanup afterwards. All the build information can be found in [PKGBUILD](PKGBUILD) and information about `PKGBUILD` can be found [here](https://wiki.archlinux.org/index.php/PKGBUILD 'pkgbuild').
+```
+$ makepkg -sic --noconfirm
+```
+
+Read about [PKGBUILD](https://wiki.archlinux.org/index.php/PKGBUILD).
 
 ## Credits
 

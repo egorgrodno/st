@@ -11,6 +11,7 @@ source=(
   https://dl.suckless.org/st/st-0.8.4.tar.gz
   https://st.suckless.org/patches/nordtheme/st-nordtheme-0.8.2.diff
   https://st.suckless.org/patches/scrollback/st-scrollback-0.8.4.diff
+  https://st.suckless.org/patches/scrollback/st-scrollback-mouse-20191024-a2c479c.diff
   https://st.suckless.org/patches/vertcenter/st-vertcenter-20180320-6ac8c8a.diff
   https://st.suckless.org/patches/anysize/st-anysize-0.8.1.diff
   my-config.diff
@@ -19,6 +20,7 @@ sha256sums=(
   'd42d3ceceb4d6a65e32e90a5336e3d446db612c3fbd9ebc1780bc6c9a03346a6'
   '01de8a6d0d855c31496c7963e78edb7565a81b60dcb9e9f00dd3eab1f43b526b'
   '418e1c5df11105482f13a008218c89eadb974630c25b4a6ff3da763dc2560e44'
+  '319458d980195d18fa0f81a6898d58f8d046c5ff982ab872d741f54bb60e267d'
   '04e6a4696293f668260b2f54a7240e379dbfabbc209de07bd5d4d57e9f513360'
   '8118dbc50d2fe07ae10958c65366476d5992684a87a431f7ee772e27d5dee50f'
   'SKIP'
@@ -29,9 +31,11 @@ prepare() {
   cd $srcdir/$pkgname-$pkgver
   patch -i $srcdir/st-nordtheme-0.8.2.diff
   patch -i $srcdir/st-scrollback-0.8.4.diff
+  patch -i $srcdir/st-scrollback-mouse-20191024-a2c479c.diff
   patch -i $srcdir/st-vertcenter-20180320-6ac8c8a.diff
   patch -i $srcdir/st-anysize-0.8.1.diff
   patch -i $srcdir/my-config.diff
+  cp config.def.h config.h
 }
 
 build() {
